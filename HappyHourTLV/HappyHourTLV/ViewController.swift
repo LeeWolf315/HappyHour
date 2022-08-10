@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         image.image = UIImage(named: "happy-hour")
+        print("hello")
         
         emailTextField.attributedPlaceholder = NSAttributedString(string: "Enter your email address", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         emailTextField.backgroundColor = .clear
