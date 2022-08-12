@@ -49,6 +49,7 @@ class BarCellView: UIView {
         self.backgroundColor = .clear
         contentView.fixInView(self)
     }
+    
     @IBAction func viewPressed(_ sender: Any) {
         delegate?.viewDidPress(view: self, identifier: identifier ?? "")
     }

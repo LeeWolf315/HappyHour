@@ -9,12 +9,16 @@ import UIKit
 
 class DealsView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var hoursLabel: UILabel!
+    @IBOutlet weak var saleLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
-    */
+    
+    func configure(hours: String, sale: String) {
+        self.hoursLabel.text = hours
+        self.saleLabel.text = sale
+    }
 
 }

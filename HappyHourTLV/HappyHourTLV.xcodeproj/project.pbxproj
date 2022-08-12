@@ -19,8 +19,10 @@
 		8310DE082869FD7100054F92 /* ExploreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310DE072869FD7100054F92 /* ExploreVC.swift */; };
 		8310DE0A2869FE5600054F92 /* BarCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8310DE092869FE5600054F92 /* BarCellView.xib */; };
 		8310DE0C2869FE6800054F92 /* BarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310DE0B2869FE6800054F92 /* BarCellView.swift */; };
+		8336828928A4F88C0026224F /* DealsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8336828828A4F88C0026224F /* DealsView.xib */; };
+		8336828B28A4F89D0026224F /* DealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336828A28A4F89D0026224F /* DealsView.swift */; };
+		83C8E65F28A6623A00BC5E8B /* BarDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C8E65E28A6623A00BC5E8B /* BarDetailsVC.swift */; };
 		E0CE9EEE28A410150058700B /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE9EED28A410150058700B /* UserProfileVC.swift */; };
-		E0CE9EF028A411620058700B /* NGSStoryboardCustomClearXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE9EEF28A411620058700B /* NGSStoryboardCustomClearXibView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +40,10 @@
 		8310DE072869FD7100054F92 /* ExploreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreVC.swift; sourceTree = "<group>"; };
 		8310DE092869FE5600054F92 /* BarCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCellView.xib; sourceTree = "<group>"; };
 		8310DE0B2869FE6800054F92 /* BarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCellView.swift; sourceTree = "<group>"; };
+		8336828828A4F88C0026224F /* DealsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DealsView.xib; sourceTree = "<group>"; };
+		8336828A28A4F89D0026224F /* DealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsView.swift; sourceTree = "<group>"; };
+		83C8E65E28A6623A00BC5E8B /* BarDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDetailsVC.swift; sourceTree = "<group>"; };
 		E0CE9EED28A410150058700B /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
-		E0CE9EEF28A411620058700B /* NGSStoryboardCustomClearXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NGSStoryboardCustomClearXibView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +87,7 @@
 				8310DDEB2869897A00054F92 /* LaunchScreen.storyboard */,
 				8310DDEE2869897A00054F92 /* Info.plist */,
 				E0CE9EED28A410150058700B /* UserProfileVC.swift */,
-				E0CE9EEF28A411620058700B /* NGSStoryboardCustomClearXibView.swift */,
+				83C8E65E28A6623A00BC5E8B /* BarDetailsVC.swift */,
 			);
 			path = HappyHourTLV;
 			sourceTree = "<group>";
@@ -95,6 +99,8 @@
 				8310DDFB2869990200054F92 /* Button.swift */,
 				8310DE092869FE5600054F92 /* BarCellView.xib */,
 				8310DE0B2869FE6800054F92 /* BarCellView.swift */,
+				8336828828A4F88C0026224F /* DealsView.xib */,
+				8336828A28A4F89D0026224F /* DealsView.swift */,
 			);
 			path = CustomControls;
 			sourceTree = "<group>";
@@ -157,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8336828928A4F88C0026224F /* DealsView.xib in Resources */,
 				8310DE0A2869FE5600054F92 /* BarCellView.xib in Resources */,
 				8310DDED2869897A00054F92 /* LaunchScreen.storyboard in Resources */,
 				8310DDEA2869897A00054F92 /* Assets.xcassets in Resources */,
@@ -173,11 +180,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8310DE082869FD7100054F92 /* ExploreVC.swift in Sources */,
+				83C8E65F28A6623A00BC5E8B /* BarDetailsVC.swift in Sources */,
 				8310DDE52869897800054F92 /* RegisterVC.swift in Sources */,
-				E0CE9EF028A411620058700B /* NGSStoryboardCustomClearXibView.swift in Sources */,
 				8310DE0C2869FE6800054F92 /* BarCellView.swift in Sources */,
 				8310DDE12869897800054F92 /* AppDelegate.swift in Sources */,
 				8310DDE32869897800054F92 /* SceneDelegate.swift in Sources */,
+				8336828B28A4F89D0026224F /* DealsView.swift in Sources */,
 				8310DE042869E43900054F92 /* SignUpVC.swift in Sources */,
 				8310DDFC2869990200054F92 /* Button.swift in Sources */,
 				E0CE9EEE28A410150058700B /* UserProfileVC.swift in Sources */,

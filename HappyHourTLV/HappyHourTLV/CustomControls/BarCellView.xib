@@ -32,13 +32,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="421" height="151.5"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rjt-iA-MZq">
-                    <rect key="frame" x="10" y="159.5" width="401" height="24"/>
+                    <rect key="frame" x="20" y="159.5" width="381" height="24"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmN-0J-345">
-                    <rect key="frame" x="10" y="191.5" width="401" height="20.5"/>
+                    <rect key="frame" x="20" y="191.5" width="381" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -47,18 +47,18 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Rjt-iA-MZq" secondAttribute="trailing" constant="10" id="798-sk-DfQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Rjt-iA-MZq" secondAttribute="trailing" constant="20" id="798-sk-DfQ"/>
                 <constraint firstItem="z0h-xD-GZL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CSC-IL-HSc"/>
                 <constraint firstItem="z0h-xD-GZL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EYz-Ml-Ea7"/>
                 <constraint firstAttribute="trailing" secondItem="z0h-xD-GZL" secondAttribute="trailing" id="FGh-yj-kRf"/>
-                <constraint firstItem="OmN-0J-345" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="PNZ-gC-sIq"/>
+                <constraint firstItem="OmN-0J-345" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="PNZ-gC-sIq"/>
                 <constraint firstAttribute="trailing" secondItem="oBK-dp-phT" secondAttribute="trailing" id="RzV-Ez-RQX"/>
                 <constraint firstAttribute="bottom" secondItem="z0h-xD-GZL" secondAttribute="bottom" id="WcB-9b-Ax8"/>
                 <constraint firstItem="oBK-dp-phT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cYe-cb-Bvw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="OmN-0J-345" secondAttribute="bottom" constant="9" id="f5O-gm-myF"/>
                 <constraint firstItem="OmN-0J-345" firstAttribute="top" secondItem="Rjt-iA-MZq" secondAttribute="bottom" constant="8" symbolic="YES" id="fRq-HB-8As"/>
-                <constraint firstItem="Rjt-iA-MZq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="j7d-Hu-XB4"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OmN-0J-345" secondAttribute="trailing" constant="10" id="pvG-31-j3u"/>
+                <constraint firstItem="Rjt-iA-MZq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="j7d-Hu-XB4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OmN-0J-345" secondAttribute="trailing" constant="20" id="pvG-31-j3u"/>
                 <constraint firstAttribute="top" secondItem="oBK-dp-phT" secondAttribute="top" id="xjC-8J-JzP"/>
                 <constraint firstItem="Rjt-iA-MZq" firstAttribute="top" secondItem="oBK-dp-phT" secondAttribute="bottom" constant="8" symbolic="YES" id="y6M-RB-Za5"/>
             </constraints>
