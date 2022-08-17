@@ -9,6 +9,7 @@ import UIKit
 
 class DealsView: UIView {
 
+    @IBOutlet var contentView: UIView!
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var saleLabel: UILabel!
     
@@ -19,6 +20,22 @@ class DealsView: UIView {
     func configure(hours: String, sale: String) {
         self.hoursLabel.text = hours
         self.saleLabel.text = sale
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    func commonInit() {
+        Bundle.main.loadNibNamed("DealsView", owner: self, options: nil)
+        self.backgroundColor = .clear
+        contentView.fixInView(self)
     }
 
 }

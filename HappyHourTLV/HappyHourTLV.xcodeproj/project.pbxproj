@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830AE0E828AAAE3D003C901C /* BarReviewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830AE0E728AAAE3D003C901C /* BarReviewsVC.swift */; };
+		830AE0EA28AAB8BD003C901C /* EditReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830AE0E928AAB8BD003C901C /* EditReviewVC.swift */; };
 		8310DDE12869897800054F92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310DDE02869897800054F92 /* AppDelegate.swift */; };
 		8310DDE32869897800054F92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310DDE22869897800054F92 /* SceneDelegate.swift */; };
 		8310DDE52869897800054F92 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310DDE42869897800054F92 /* RegisterVC.swift */; };
@@ -22,10 +24,15 @@
 		8336828928A4F88C0026224F /* DealsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8336828828A4F88C0026224F /* DealsView.xib */; };
 		8336828B28A4F89D0026224F /* DealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336828A28A4F89D0026224F /* DealsView.swift */; };
 		83C8E65F28A6623A00BC5E8B /* BarDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C8E65E28A6623A00BC5E8B /* BarDetailsVC.swift */; };
+		83C8E66128A7992500BC5E8B /* UserReviewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C8E66028A7992500BC5E8B /* UserReviewsVC.swift */; };
+		83C8E66428A79AD500BC5E8B /* reviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C8E66228A79AD500BC5E8B /* reviewCell.swift */; };
+		83C8E66528A79AD500BC5E8B /* reviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C8E66328A79AD500BC5E8B /* reviewCell.xib */; };
 		E0CE9EEE28A410150058700B /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE9EED28A410150058700B /* UserProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		830AE0E728AAAE3D003C901C /* BarReviewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarReviewsVC.swift; sourceTree = "<group>"; };
+		830AE0E928AAB8BD003C901C /* EditReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReviewVC.swift; sourceTree = "<group>"; };
 		8310DDDD2869897800054F92 /* HappyHourTLV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyHourTLV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8310DDE02869897800054F92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8310DDE22869897800054F92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +50,9 @@
 		8336828828A4F88C0026224F /* DealsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DealsView.xib; sourceTree = "<group>"; };
 		8336828A28A4F89D0026224F /* DealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsView.swift; sourceTree = "<group>"; };
 		83C8E65E28A6623A00BC5E8B /* BarDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDetailsVC.swift; sourceTree = "<group>"; };
+		83C8E66028A7992500BC5E8B /* UserReviewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviewsVC.swift; sourceTree = "<group>"; };
+		83C8E66228A79AD500BC5E8B /* reviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewCell.swift; sourceTree = "<group>"; };
+		83C8E66328A79AD500BC5E8B /* reviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = reviewCell.xib; sourceTree = "<group>"; };
 		E0CE9EED28A410150058700B /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +98,9 @@
 				8310DDEE2869897A00054F92 /* Info.plist */,
 				E0CE9EED28A410150058700B /* UserProfileVC.swift */,
 				83C8E65E28A6623A00BC5E8B /* BarDetailsVC.swift */,
+				83C8E66028A7992500BC5E8B /* UserReviewsVC.swift */,
+				830AE0E728AAAE3D003C901C /* BarReviewsVC.swift */,
+				830AE0E928AAB8BD003C901C /* EditReviewVC.swift */,
 			);
 			path = HappyHourTLV;
 			sourceTree = "<group>";
@@ -101,6 +114,8 @@
 				8310DE0B2869FE6800054F92 /* BarCellView.swift */,
 				8336828828A4F88C0026224F /* DealsView.xib */,
 				8336828A28A4F89D0026224F /* DealsView.swift */,
+				83C8E66228A79AD500BC5E8B /* reviewCell.swift */,
+				83C8E66328A79AD500BC5E8B /* reviewCell.xib */,
 			);
 			path = CustomControls;
 			sourceTree = "<group>";
@@ -166,6 +181,7 @@
 				8336828928A4F88C0026224F /* DealsView.xib in Resources */,
 				8310DE0A2869FE5600054F92 /* BarCellView.xib in Resources */,
 				8310DDED2869897A00054F92 /* LaunchScreen.storyboard in Resources */,
+				83C8E66528A79AD500BC5E8B /* reviewCell.xib in Resources */,
 				8310DDEA2869897A00054F92 /* Assets.xcassets in Resources */,
 				8310DDE82869897800054F92 /* Main.storyboard in Resources */,
 				8310DDFA286998F600054F92 /* Button.xib in Resources */,
@@ -185,10 +201,14 @@
 				8310DE0C2869FE6800054F92 /* BarCellView.swift in Sources */,
 				8310DDE12869897800054F92 /* AppDelegate.swift in Sources */,
 				8310DDE32869897800054F92 /* SceneDelegate.swift in Sources */,
+				830AE0E828AAAE3D003C901C /* BarReviewsVC.swift in Sources */,
 				8336828B28A4F89D0026224F /* DealsView.swift in Sources */,
+				830AE0EA28AAB8BD003C901C /* EditReviewVC.swift in Sources */,
 				8310DE042869E43900054F92 /* SignUpVC.swift in Sources */,
 				8310DDFC2869990200054F92 /* Button.swift in Sources */,
+				83C8E66428A79AD500BC5E8B /* reviewCell.swift in Sources */,
 				E0CE9EEE28A410150058700B /* UserProfileVC.swift in Sources */,
+				83C8E66128A7992500BC5E8B /* UserReviewsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

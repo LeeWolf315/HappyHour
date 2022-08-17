@@ -9,6 +9,8 @@ import UIKit
 
 class BarDetailsVC: UIViewController {
 
+    @IBOutlet weak var userButton: UIButton!
+    @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var barView: BarCellView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var allReviewsView: UIView!
@@ -27,6 +29,10 @@ class BarDetailsVC: UIViewController {
         allReviewsView.layer.cornerRadius = 6
         rateButton.layer.cornerRadius = 6
         setPopUpButton()
+        
+        let view = DealsView()
+        view.configure(hours: "16-20", sale: "50% drinks")
+        stackView.addArrangedSubview(view)
     }
     
     func setPopUpButton(){
@@ -40,11 +46,6 @@ class BarDetailsVC: UIViewController {
             UIAction(title: "3", state: .off, handler: optionClosure),
             UIAction(title: "4", state: .off , handler: optionClosure),
             UIAction(title: "5", state: .off, handler: optionClosure),
-            UIAction(title: "6", state: .off, handler: optionClosure),
-            UIAction(title: "7", state: .off, handler: optionClosure),
-            UIAction(title: "8", state: .off , handler: optionClosure),
-            UIAction(title: "9", state: .off, handler: optionClosure),
-            UIAction(title: "10", state: .off, handler: optionClosure),
         ])
         
         rateButton.showsMenuAsPrimaryAction = true
@@ -53,6 +54,14 @@ class BarDetailsVC: UIViewController {
     }
 
     @IBAction func seeAllReviewsPressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func userButtonPressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func menuButtonPressed(_ sender: Any) {
         
     }
     

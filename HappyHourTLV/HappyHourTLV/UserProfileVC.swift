@@ -11,11 +11,13 @@ class UserProfileVC: UIViewController {
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var userPicture: UIImageView!
     @IBOutlet weak var updatePictureButton: Button!
     @IBOutlet weak var seeReviewsButton: Button!
     @IBOutlet weak var editDetailsButton: Button!
     
     private var userName: String = ""
+    private var userImage: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
