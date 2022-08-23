@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol reviewCellDelegate {
     func editDidPress(identifier: Int)
@@ -29,7 +30,6 @@ class reviewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
         view.layer.borderColor = CGColor(red: 255, green: 255, blue: 255, alpha: 1)
         view.layer.cornerRadius = 6
@@ -37,21 +37,25 @@ class reviewCell: UICollectionViewCell {
         
         editButton.layer.cornerRadius = 6
         deleteButton.layer.cornerRadius = 6
+        
+        image.layer.cornerRadius = image.frame.height / 2
     }
     
     func configure(title: String, date: String, rate: Int, description: String, image: String, identifier: Int) {
-        self.reviewTitle.text = title
-        self.dateLabel.text = "Date: \(date)"
-        self.rateLabel.text = "Rate: \(rate)"
-        self.reviewDescription.text = description
-        self.image.image = UIImage(named: image)
+        self.reviewTitle.text = "\(title)"
+        self.dateLabel.text = "Date:  \(date)"
+        self.rateLabel.text = "Rate:  \(rate)"
+        self.reviewDescription.text = "Review:  \(description)"
+        
+        let url = URL(string: image)
+        self.image.kf.setImage(with: url)
         self.identifier = identifier
     }
     
-    func setButtonsShow(show: Bool) {
-        buttonsView.isHidden = show
+    func setButtonsHide(hide: Bool) {
+        buttonsView.isHidden = hide
     }
-
+    
     @IBAction func editPressed(_ sender: Any) {
         delegate?.editDidPress(identifier: identifier)
     }

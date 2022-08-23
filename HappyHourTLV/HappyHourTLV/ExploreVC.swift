@@ -6,64 +6,92 @@
 //
 
 import UIKit
+import FirebaseAuth
+import CoreAudio
 
 class ExploreVC: UIViewController {
     
     @IBOutlet weak var userButton: UIButton!
-    @IBOutlet weak var menuButton: UIButton!
-    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var stackView: UIStackView!
     
+    private var selectedBar: Bar?
+    var openByUserDetails: Bool = false
+    
+    var reviews: [Review] = []
+    var bars: [Bar] = []
+    private var image: Data = Data()
+    var user: User?
+    let userId = FirebaseAuth.Auth.auth().currentUser?.uid
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        Model.instance.getUser(byId: userId ?? "", completion: {
+            user in
+            self.user = user
+        })
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setKeyboardBehavior()
-        
-        for index in 0...5 {
+        for index in 0..<bars.count {
+            let url = URL(string: bars[index].imageUrl)
+            let d = try? Data(contentsOf: url!)
+            
+            if let imageData = d {
+                image = imageData
+            }
+            
             let view = BarCellView()
-            view.configure(image: UIImage(named: "happy-hour")!, title: "Index", descripation: String(index), identifier: String(index))
+            view.configure(image: UIImage(data: image) ?? UIImage(), title: bars[index].name, address: bars[index].address, identifier: index)
             view.delegate = self
             stackView.addArrangedSubview(view)
         }
     }
     
+    @IBAction func logoutButtonPressed(_ sender: Any) {
+        //Logout
+        do {
+            try FirebaseAuth.Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+        performSegue(withIdentifier: "ExploreToRegisterSegue", sender: self)
+    }
+    
     
     @IBAction func userButtonPressed(_ sender: Any) {
-    }
-    
-    @IBAction func menuButtonPressed(_ sender: Any) {
-    }
-    
-    
-    func setKeyboardBehavior() {
-        view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    @objc func keyboardWillShow(notification: NSNotification) {
-        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-            // if keyboard size is not available for some reason, dont do anything
-            return
+        if openByUserDetails {
+            openByUserDetails = false
+            self.dismiss(animated: true)
+        } else {
+            performSegue(withIdentifier: "ExploreToUserProfileSegue", sender: self)
         }
-        // move the root view up by the distance of keyboard height
-        self.view.frame.origin.y = -keyboardSize.height
     }
     
-    @objc func keyboardWillHide(notification: NSNotification) {
-        // move back the root view origin to zero
-        self.view.frame.origin.y = 0
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if segue.identifier == "ExploreToBarDetailsSegue" {
+            let vc = (segue.destination as! BarDetailsVC)
+            vc.user = user
+            vc.bar = selectedBar
+            vc.reviews = reviews
+        } else if segue.identifier == "ExploreToUserProfileSegue" {
+            let vc = (segue.destination as! UserProfileVC)
+            vc.user = user
+            vc.bars = bars
+            
+        }
     }
-    
 }
 
 extension ExploreVC: BarCellViewDelegate {
-    func viewDidPress(view: BarCellView, identifier: String) {
+    func viewDidPress(view: BarCellView, identifier: Int) {
         print(identifier)
+        selectedBar = bars[identifier]
+        performSegue(withIdentifier: "ExploreToBarDetailsSegue", sender: self)
     }
 }

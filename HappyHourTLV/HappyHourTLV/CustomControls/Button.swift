@@ -23,7 +23,6 @@ class Button: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
     }
     
     override init(frame: CGRect) {

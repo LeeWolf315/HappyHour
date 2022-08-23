@@ -8,7 +8,7 @@
 import UIKit
 
 protocol BarCellViewDelegate {
-    func viewDidPress(view: BarCellView, identifier: String)
+    func viewDidPress(view: BarCellView, identifier: Int)
 }
 
 class BarCellView: UIView {
@@ -17,9 +17,9 @@ class BarCellView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var descripation: UILabel!
+    @IBOutlet weak var address: UILabel!
     
-    private var identifier: String?
+    private var identifier: Int?
     var delegate: BarCellViewDelegate?
     
     override func awakeFromNib() {
@@ -27,10 +27,10 @@ class BarCellView: UIView {
         
     }
     
-    func configure(image: UIImage, title: String, descripation: String, identifier: String) {
+    func configure(image: UIImage, title: String, address: String, identifier: Int) {
         self.image.image = image
         self.title.text = title
-        self.descripation.text = descripation
+        self.address.text = address
         self.identifier = identifier
     }
     
@@ -47,11 +47,13 @@ class BarCellView: UIView {
     func commonInit() {
         Bundle.main.loadNibNamed("BarCellView", owner: self, options: nil)
         self.backgroundColor = .clear
+        self.contentView.layer.cornerRadius = 12
+        self.image.layer.cornerRadius = 12
         contentView.fixInView(self)
     }
     
     @IBAction func viewPressed(_ sender: Any) {
-        delegate?.viewDidPress(view: self, identifier: identifier ?? "")
+        delegate?.viewDidPress(view: self, identifier: identifier ?? 0)
     }
 }
 
