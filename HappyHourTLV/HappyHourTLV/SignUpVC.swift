@@ -90,8 +90,13 @@ class SignUpVC: UIViewController {
         confirmButton.delegate = self
         
         if editUserDetailsMode {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yy"
+            let date = dateFormatter.date(from: user?.dateOfBirth ?? "")
+            
             firstNameTextField.text = user?.firstName
             lastNameTextField.text = user?.lastName
+            datePicker.date = date ?? Date()
             emailTextField.text = user?.email
             passwordTextField.text = user?.password
         }
