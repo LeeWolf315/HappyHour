@@ -32,6 +32,7 @@ class SignUpVC: UIViewController {
     
     var user: User?
     var bars: [Bar] = []
+    var reviews: [Review] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -219,6 +220,27 @@ extension SignUpVC: buttonDelegate {
                     self.dismiss(animated: true)
                 })
                 
+            }
+            
+            for review in reviews {
+                var fullName: String?
+                var userImageUrl: String?
+                if review.userId == user?.uid {
+                    fullName = "\(user?.firstName ?? "") \(user?.lastName ?? "")"
+                    userImageUrl = user?.imageUrl
+                }
+                
+                let r = Review(uid: review.uid,
+                               userName: fullName ?? review.userName,
+                               userId: user?.uid ?? "",
+                               date: review.date,
+                               rate: review.rate,
+                               text: review.text,
+                               barId: review.barId,
+                               barName: review.barName,
+                               userImageUrl: userImageUrl ?? review.userImageUrl,
+                               barImageUrl: review.barImageUrl)
+                Model.instance.update(review: r)
             }
         }
     }

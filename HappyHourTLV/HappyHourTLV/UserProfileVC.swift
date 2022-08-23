@@ -118,6 +118,7 @@ class UserProfileVC: UIViewController, UIImagePickerControllerDelegate & UINavig
             vc.editUserDetailsMode = true
             vc.user = user
             vc.bars = bars
+            vc.reviews = reviews
         } else if segue.identifier == "UserProfileToHomeScreenSegue" {
             let vc = (segue.destination as! ExploreVC)
             vc.openByUserDetails = true
